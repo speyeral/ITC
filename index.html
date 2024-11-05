@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html>
+    <head>
+        <h1>W3lc0me tO My wEBpag3!!!!</h1>
+    </head>
+
+        <label for="lname"> lA5T nAm3 plZz:</label>
+        <input type="text" id="lname" name="lname"></input>
+        <label for="fname">f1rs+ nAm3 plZz:</label>
+        <input type="text" id="fname" name="fname"></input>
+
+        <br>
+
+        <label for="ccard"> Please put your credit card number:</label>
+        <input type="number" id="ccard" name ="ccard"></input>
+
+        <br>
+
+        <label for="bday"> Kailan ka pinanganak? Petsa or pizza ahaha </label>
+        <input type="date" id="bday" name="bday" value="2024-01-21"></input>
+
+        <br>
+
+        <input type="radio" id="female" name="gender" value="FEMALE">
+        <label for="female">Female</label>
+        <input type="radio" id="male" name="gender" value="MALE">
+        <label for="male">Male</label>
+
+        <br>
+
+        <label for="working">r u working</label>
+        <input type="checkbox" id="working" name="working"></input>
+        <label for="ylevel">anong year ka na?!</label>
+            <select name="ylevel" id="level">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+
+        <br>
+
+        <label for="pass"> password plz </label>
+        <input type="password" id="pass" name="pass"></input>
+    
+    <button onclick = "computesum()"> add 2 numbers? </button>
+    <label id="suml"> The sum is:</label>
+    <input type="number" id="suml" name="suml"></input>
+
+
+   <footer>
+        <h1>THIS IS THE F00T3R!</h1>
+    </footer>
+
+    <script>
+        function computesum()
+        {
+            let a=" ", b=" ";
+
+            a = prompt("itipa ang unang numero");
+            b = prompt("itipa ang pangalawang numero");
+
+
+            let z = a+b;
+
+             document.getElementById("suml").innerHTML='The sum of '+a+' and '+b+' is:';
+             document.getElementById("sum").value=z;
+            
+        }
+        </script>
+
+</html>
