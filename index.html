@@ -1,74 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
-    <head>
-        <h1>W3lc0me tO My wEBpag3!!!!</h1>
-    </head>
+    <link rel="stylesheet" type="text/css" href="indexStyle.css">
 
-        <label for="lname"> lA5T nAm3 plZz:</label>
-        <input type="text" id="lname" name="lname"></input>
-        <label for="fname">f1rs+ nAm3 plZz:</label>
-        <input type="text" id="fname" name="fname"></input>
+<header>
+    <h1>My Project in Intro to Computing</h1>
 
-        <br>
+    <h2>Welcome to my first ever website in HTML! In here, numerous calculations are present. Just simply press the buttons below to continue.</h2>
 
-        <label for="ccard"> Please put your credit card number:</label>
-        <input type="number" id="ccard" name ="ccard"></input>
+</header>
 
-        <br>
+<body>
+    <h3>Payroll Calculator</h3>
+    <p>
+        This payroll calculator allows you to calculate the gross pay and net pays of your employees. 
+        Simply input the employee's name, days worked, and daily rate to continue.
+    </p>
+    <button onclick="document.location='payroll.html'">Go to Payroll</button>
 
-        <label for="bday"> Kailan ka pinanganak? Petsa or pizza ahaha </label>
-        <input type="date" id="bday" name="bday" value="2024-01-21"></input>
+    <br>
 
-        <br>
-
-        <input type="radio" id="female" name="gender" value="FEMALE">
-        <label for="female">Female</label>
-        <input type="radio" id="male" name="gender" value="MALE">
-        <label for="male">Male</label>
-
-        <br>
-
-        <label for="working">r u working</label>
-        <input type="checkbox" id="working" name="working"></input>
-        <label for="ylevel">anong year ka na?!</label>
-            <select name="ylevel" id="level">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            </select>
-
-        <br>
-
-        <label for="pass"> password plz </label>
-        <input type="password" id="pass" name="pass"></input>
+    <h3>Nth Factorial, Sum, and Average</h3>
+    <p>
+        This calculator allows you to find the factorial, sum, and average of any number n.
+    </p>
+    <button onclick="document.location='nthFactorial_sum_avg.html'">Go to Nth Factorial, Sum, and Average</button>
     
-    <button onclick = "computesum()"> add 2 numbers? </button>
-    <label id="suml"> The sum is:</label>
-    <input type="number" id="suml" name="suml"></input>
+    <br>
+
+    <h3>Income Tax Calculator</h3>
+    <p>
+        This calculator allows you to find the income tax for any taxable income
+    </p>
+    <button onclick="document.location='incometaxcalculator.html'">Go to Income Tax Calculator</button>
+    
+    <br>
+
+    <h3>Simple Computations</h3>
+    <p>
+        Numerous conversions can be inputed here such as temperature and length.
+    </p>
+    <button onclick="document.location='simplecomputations.html'">Go to Simple Computations</button>
 
 
-   <footer>
-        <h1>THIS IS THE F00T3R!</h1>
-    </footer>
 
-    <script>
-        function computesum()
-        {
-            let a=" ", b=" ";
-
-            a = prompt("itipa ang unang numero");
-            b = prompt("itipa ang pangalawang numero");
-
-
-            let z = a+b;
-
-             document.getElementById("suml").innerHTML='The sum of '+a+' and '+b+' is:';
-             document.getElementById("sum").value=z;
-            
-        }
-        </script>
-
+</body>
 </html>

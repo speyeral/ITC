@@ -1,0 +1,12 @@
+
+
+body {
+  background-image: url(photo2.jpg);
+  background-repeat:no-repeat;
+  
+  p {
+    border: 2px;
+    padding: auto;
+    margin: auto;
+  }
+}
