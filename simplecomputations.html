@@ -3,70 +3,75 @@
 <html>
 <body>
 
-<h1>Simple Computations</h1>
+<link rel="stylesheet" type="text/css" href="simStyle.css">
 
-<button onclick="document.location='index.html'">Go Back to Homepage</button>
 
-<h2>Convert Fahrenheit to Celsius</h2>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <b>Simple Computations</b>
+</div>    
 
-<p>
-    <label for="f">Input Fahrenheit</label>
-    <input id="f" name="f" type="number">
+<div class="elements">
+    <div>
+    <h2>Fahrenheit to Celsius</h2>
+    <p>
+        <label for="f">Input Fahrenheit:</label>
+        <input id="f" name="f" type="number">
     
-    <button onclick="compcel()"> Compute Celsius </button>
+        <button onclick="compcel()"> Compute Celsius! </button>
+    </p>
 
-</p>
+    <p>
+        <label for="celsius" id="cellabel">The conversion of x Fahrenheit into Celsius is:</label>  
+        <input id="celsius" name="celsius" type="number" readonly></input>
+    </p>
+    </div>
 
-<p>
-    <label for="celsius" id="cellabel">The answer is:</label>  
-    <input id="celsius" name="celsius" type="number" readonly></input>
-</p>
-
-<h2>Convert Celsius to Fahrenheit</h2>
-
-<p>
-    <label for="c">Input Celsius</label>
-    <input id="c" name="c" type="number">
+    <div>
+    <h2>Celsius to Fahrenheit</h2>
+    <p>
+        <label for="c">Input Celsius:</label>
+        <input id="c" name="c" type="number">
     
-    <button onclick="compfah()"> Compute Fahrenheit </button>
+        <button onclick="compfah()"> Compute Fahrenheit! </button>
+    </p>
 
-</p>
+    <p>
+        <label for="fahrenheit" id="fahlabel">The conversion of x Celsius into Fahrenheit is:</label>  
+        <input id="fahrenheit" name="fahrenheit" type="number" readonly></input>
+    </p>
+    </div>
 
-<p>
-    <label for="fahrenheit" id="fahlabel">The answer is:</label>  
-    <input id="fahrenheit" name="fahrenheit" type="number" readonly></input>
-</p>
-
-<h2>Convert Meters to Feet</h2>
-
-<p>
-    <label for="m">Input Meters</label>
-    <input id="m" name="m" type="number">
+    <div>
+    <h2>Meters to Feet</h2>
+    <p>
+        <label for="m">Input Meters:</label>
+        <input id="m" name="m" type="number">
     
-    <button onclick="compfet()"> Compute Feet </button>
+        <button onclick="compfet()"> Compute Feet! </button>
+    </p>
 
-</p>
+    <p>
+        <label for="feet" id="fetlabel">The conversion of x Meters into Feet is:</label>  
+        <input id="feet" name="feet" type="number" readonly></input>
+    </p>
+    </div>
 
-<p>
-    <label for="feet" id="fetlabel">The answer is:</label>  
-    <input id="feet" name="feet" type="number" readonly></input>
-</p>
-
-<h2>Convert Feet to Meters</h2>
-
-<p>
-    <label for="f">Input Feet</label>
-    <input id="f" name="f" type="number">
+    <div>
+    <h2>Feet to Meters</h2>
+    <p>
+        <label for="f">Input Feet:</label>
+        <input id="f" name="f" type="number">
     
-    <button onclick="compmet()"> Compute Meters </button>
+        <button onclick="compmet()"> Compute Meters! </button>
+    </p>
 
-</p>
-
-<p>
-    <label for="meters" id="metlabel">The answer is:</label>  
-    <input id="meters" name="meters" type="number" readonly></input>
-</p>
-
+    <p>
+        <label for="meters" id="metlabel">The conversion of x Feet into Meters is:</label>  
+        <input id="meters" name="meters" type="number" readonly></input>
+    </p>
+    </div>
+</div>
 
 <script>
     function compcel() //Fahrenheit to Celsius

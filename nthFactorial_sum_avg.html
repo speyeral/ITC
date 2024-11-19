@@ -3,26 +3,40 @@
 <html>
 <body>
 
-<h1> Nth Factorial, Sum of N Numbers, and Average of N Numbers</h1>
+<link rel="stylesheet" type="text/css" href="nStyle.css">
 
-<button onclick="document.location='index.html'">Go Back to Homepage</button>
 
-<br>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <b>Nth Factorial, Sum, and Average</b>
+</div>  
 
-<p>
-<label for="n">Input a number: </label>
-<input id="n" name ="n" type="number"></input>
-<button onclick="showNumbers()">Show Numbers</button>
-</p>
+<div class="input">
+    <p class="text">
+    <label for="n">Input a number: </label>
+    <input id="n" name ="n" type="number"></input>
+    <button onclick="showNumbers()">Show Numbers</button>
+    </p>
+</div>
 
-<h3 id="nfacttitle"></h3>
-<p id="nfact"></p>
 
-<h3 id="nsumtitle"></h3>
-<p id="nsum"></p>
 
-<h3 id="navgtitle"></h3>
-<p id="navg"></p>
+<div class="elements">  
+    <div>
+        <h2 id="nfacttitle"></h2>
+        <p id="nfact"></p>
+    </div>
+
+    <div>
+        <h2 id="nsumtitle"></h2>
+        <p id="nsum"></p>
+    </div>
+
+    <div>
+        <h2 id="navgtitle"></h2>
+        <p id="navg"></p>
+    </div>
+</div>
 
 <script>
     function showNumbers() {

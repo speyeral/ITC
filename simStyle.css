@@ -1,0 +1,116 @@
+@font-face {
+    font-family: Arcane;
+    src: url(arcane.woff);
+  }
+  
+  @font-face {
+    font-family: Paper;
+    src: url(paper.woff);
+  }
+  
+  @font-face {
+    font-family: Crickey;
+    src: url(crickey_squats.ttf);
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Crickey';
+    font-size: 24px;
+  }
+  
+  .navbar b {
+    float: center;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Crickey';
+    font-size: 24px;
+  }
+
+  .navbar a:hover {
+    background-image: url(newspaper.jpg);
+    color: black;
+  }
+
+  body { 
+    width: 100%;
+    padding-top: 150px;
+    margin: 0;
+    text-align: center;
+    background-image: url(541713.jpg);
+    position: absolute;
+
+    p {
+        text-align: center;
+        margin: center;
+        border-radius: 25px;
+        background-image: url(paper.jpg);
+        background-size:cover;
+        padding: 20px; 
+        width: 320px;
+        height: 120px;
+        font-family: 'Paper';
+        font-size: larger;
+        display: inline-block;
+      }
+    
+      button {
+        background-color: #000000;
+        background-image: url(newspaper.jpg);
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 10px 16px;
+        text-align: center;
+        display:block;
+        font-family: 'Paper';
+        font-size: 24px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    
+      button:hover{
+        background: black;
+        color: white;
+      }
+    
+      div.elements {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      div.elements div{
+        flex: auto;
+        width: 25%, 100%;
+      }
+
+      div.elements h2{
+        background-color: #000000;
+        margin: 0, auto;
+        color: white;
+        font-family: 'Crickey';
+        text-align: center;
+      }
+
+      input {
+        font-family: 'Paper';
+        font-size: large;
+        width: 110px;
+      }
+  }
+
+  
