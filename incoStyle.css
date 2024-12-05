@@ -55,7 +55,7 @@ body {
     position: absolute;
 
     p {
-        text-align: center;
+        text-align: justify;
         margin: center;
         border-radius: 25px;
         background-image: url(paper.jpg);
@@ -64,53 +64,15 @@ body {
         width: 320px;
         height: 120px;
         font-family: 'Paper';
-        font-size: larger;
+        font-size: x-large;
         display: inline-block;
       }
     
-      button {
-        background-color: #000000;
-        background-image: url(newspaper.jpg);
-        border: none;
-        color: rgb(0, 0, 0);
-        padding: 10px 16px;
-        text-align: center;
-        display:block;
+    input {
         font-family: 'Paper';
-        font-size: 24px;
-        margin: 4px 2px;
-        cursor: pointer;
-      }
-    
-      button:hover{
-        background: black;
-        color: white;
-      }
-    
-      div.elements {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    
-      div.elements div{
-        flex: auto;
-        width: 25%, 100%;
+        font-size: x-large;
+        width: 250px;
       }
 
-      div.elements h2{
-        background-color: #000000;
-        margin: 0, auto;
-        color: white;
-        font-family: 'Crickey';
-        text-align: center;
-      }
-
-      input {
-        font-family: 'Paper';
-        font-size: large;
-        width: 110px;
-      }
+    
 }
-
-  

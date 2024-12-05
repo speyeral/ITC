@@ -14,8 +14,8 @@
 <div class="input">
     <p class="text">
     <label for="n">Input a number: </label>
-    <input id="n" name ="n" type="number"></input>
-    <button onclick="showNumbers()">Show Numbers</button>
+    <input id="n" name ="n" type="number" oninput="showNumbers()"></input>
+    <button onclick="hideNumbers()">Hide Numbers?</button>
     </p>
 </div>
 
@@ -39,8 +39,44 @@
 </div>
 
 <script>
+    function getOrdinalSuffix(n) {
+        const suffix = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
+        if (n % 100 >= 11 && n % 100 <= 13) {
+            return 'th';
+        } else {
+        return suffix[n % 10];
+            }
+    }
+
+    function hideNumbers() {
+        document.getElementById("nfact").textContent = "";
+        document.getElementById("nfacttitle").textContent = "";
+        document.getElementById("nsum").textContent = "";
+        document.getElementById("nsumtitle").textContent = "";
+        document.getElementById("navg").textContent = "";
+        document.getElementById("navgtitle").textContent = "";
+        return;
+    }
+
     function showNumbers() {
         const n = parseInt(document.getElementById("n").value);
+        const max = 999999999
+
+        if (n > max) {
+            alert("Please enter up to 9 digits only.");
+            document.getElementById("n").value="";
+            return;
+        }
+
+        if (isNaN(n)) {
+            document.getElementById("nfact").textContent = "";
+            document.getElementById("nfacttitle").textContent = "";
+            document.getElementById("nsum").textContent = "";
+            document.getElementById("nsumtitle").textContent = "";
+            document.getElementById("navg").textContent = "";
+            document.getElementById("navgtitle").textContent = "";
+            return;
+        }
 
         let i = 1;
         let nfact = 1;
@@ -63,7 +99,7 @@
         navg /= n;
 
         document.getElementById("nfact").textContent = nfact;
-        document.getElementById("nfacttitle").innerHTML="The "+n+"th factorial number is:";
+        document.getElementById("nfacttitle").innerHTML = "The " + n + getOrdinalSuffix(n) + " factorial number is:";
         document.getElementById("nsum").textContent = nsum;
         document.getElementById("nsumtitle").innerHTML="The sum of the first "+n+" numbers is:";
         document.getElementById("navg").textContent = navg;

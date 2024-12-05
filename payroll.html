@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 
 <html>
+
+<link rel="stylesheet" type="text/css" href="payStyle.css">
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <b>Payroll</b>
+</div> 
+
 <body onload="initpayroll()">
 
-  <h1>Payroll</h1>
+  <div class="body">
+    <div>
+      <p class="input">
+        <label for="emname">Employee Name:</label>
+        <input id="emname" name="emname" type="text">
+        <label for="days">Days Worked:</label>
+        <input id="days" name="days" type="number">
+        <label for="drate">Daily Rate:</label>
+        <input id="drate" name="drate" type="number">
+        <label for="damount">Deduction Amount:</label>
+        <input id="damount" name="damount" type="number"> 
+        <button onclick="addtopayroll()">Add to Payroll</button>
+        <label for="items">Payroll Items:</label>
+        <input id="items" name="items" type="number" readonly>
+        <label for="dellinenum">Delete Line Number:</label>
+        <input id="dellinenum" name="dellinenum" type="number">
+        <button onclick="deletelinenum()">Delete</button>
+      </p>
+    </div>
+  </div>
 
-  <button onclick="document.location='index.html'">Go Back to Homepage</button>
-
-  <p>
-    <label for="emname">Employee Name:</label>
-    <input id="emname" name="emname" type="text">
-    <label for="days">Days Worked:</label>
-    <input id="days" name="days" type="number">
-    <label for="drate">Daily Rate:</label>
-    <input id="drate" name="drate" type="number">
-    <label for="damount">Deduction Amount:</label>
-    <input id="damount" name="damount" type="number">
-    <button onclick="addtopayroll()">Add to Payroll</button>
-  </p>
-  <p>
-    <label for="items">Payroll Items:</label>
-    <input id="items" name="items" type="number" readonly>
-    <label for="dellinenum">Delete Line Number:</label>
-    <input id="dellinenum" name="dellinenum" type="number">
-    <button onclick="deletelinenum()">Delete</button>
-  </p>
-
-  <p id="table"></p>
+  <div class="table">
+    <p class="table" id="table"></p>
+  </div>
 
   <script>
     let payroll = [];
@@ -39,6 +47,11 @@
       const daysWorked = parseInt(document.getElementById("days").value);
       const dailyRate = parseInt(document.getElementById("drate").value);
       const deductionAmt = parseInt(document.getElementById("damount").value);
+
+      if (!daysWorked || !dailyRate || !deductionAmt) {
+        alert("Please fill in all fields.");
+        return;
+      }
 
       const payrollLine = {
         daysWorked,
@@ -59,6 +72,12 @@
 
     function deletelinenum() {
       const lineNo = parseInt(document.getElementById("dellinenum").value);
+
+      if (isNaN(lineNo) || lineNo < 1 || lineNo > payroll.length) {
+        alert("Invalid line number. Please enter a valid number.");
+        return;
+      }
+      
       if (confirm("Delete line no. " + lineNo + "?")) {
         payroll.splice(lineNo - 1, 1);
         document.getElementById("items").value = payroll.length;

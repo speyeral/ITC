@@ -53,22 +53,32 @@ body {
     text-align: center;
     background-image: url(541713.jpg);
     position: absolute;
+    overflow: auto;
 
-    p {
-        text-align: center;
+    div.body {
+        width: 50%;
+        display: flex;
+        text-align: justify;
+        margin: center;
+        float: left;
+    }
+
+    p.input {
+        margin: 5px;
+        text-align: justify;
         margin: center;
         border-radius: 25px;
         background-image: url(paper.jpg);
-        background-size:cover;
+        background-size:contain;
         padding: 20px; 
-        width: 320px;
-        height: 120px;
+        width: 85%;
+        height: 250px;
         font-family: 'Paper';
-        font-size: larger;
+        font-size: 20px;
         display: inline-block;
-      }
-    
-      button {
+    }
+
+    button {
         background-color: #000000;
         background-image: url(newspaper.jpg);
         border: none;
@@ -79,38 +89,41 @@ body {
         font-family: 'Paper';
         font-size: 24px;
         margin: 4px 2px;
+        margin-left: 10px;
         cursor: pointer;
-      }
+    }
     
-      button:hover{
+    button:hover{
         background: black;
         color: white;
-      }
+    }
     
-      div.elements {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    
-      div.elements div{
-        flex: auto;
-        width: 25%, 100%;
-      }
-
-      div.elements h2{
-        background-color: #000000;
-        margin: 0, auto;
-        color: white;
-        font-family: 'Crickey';
-        text-align: center;
-      }
-
-      input {
+    input {
         font-family: 'Paper';
-        font-size: large;
-        width: 110px;
-      }
-}
+        font-size: 20px;
+        width: 150px;
+    }
 
-  
+    div.table {
+        text-align: center;
+        align-items: center;
+        width: 50%;
+        float: left;
+    }
+
+    p.table {
+        margin: 5px;
+        text-align: center;
+        margin: center;
+        border-radius: 25px;
+        background-image: url(paper.jpg);
+        background-size:contain;
+        padding: 20px; 
+        width: 85%;
+        height:fit-content;
+        font-family: 'Paper';
+        font-size: 20px;
+        display: inline-block;
+    }
+    
+}
