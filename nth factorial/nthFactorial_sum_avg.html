@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nth Factorial, Sum, and Average</title>
+  <link rel="stylesheet" type="text/css" href="nStyle.css">
+  <script src="nth.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <b>Nth Factorial, Sum, and Average</b>
+  </div>
+
+  <div class="input">
+    <p class="text">
+      <label for="n">Input a number: </label>
+      <input id="n" name="n" type="number" oninput="showNumbers()">
+      <button onclick="hideNumbers()">Hide Numbers?</button>
+    </p>
+  </div>
+
+  <div class="elements">
+    <div>
+      <h2 id="nfacttitle"></h2>
+      <p id="nfact"></p>
+    </div>
+
+    <div>
+      <h2 id="nsumtitle"></h2>
+      <p id="nsum"></p>
+    </div>
+
+    <div>
+      <h2 id="navgtitle"></h2>
+      <p id="navg"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

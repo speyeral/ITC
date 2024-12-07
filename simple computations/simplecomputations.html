@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Computations</title>
+  <link rel="stylesheet" type="text/css" href="simStyle.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <b>Simple Computations</b>
+  </div>
+
+  <div class="elements">
+    <div>
+      <h2>Fahrenheit to Celsius</h2>
+      <p>
+        <label for="fah">Input Fahrenheit:</label>
+        <input id="fah" name="fah" type="number" oninput="compcel()">
+
+        <button onclick="celfor()">Show Celsius Formula!</button>
+      </p>
+
+      <p>
+        <label for="celsius" id="cellabel">The conversion of x Fahrenheit into Celsius is:</label>
+        <input id="celsius" name="celsius" type="number" readonly>
+      </p>
+    </div>
+
+    <div>
+      <h2>Celsius to Fahrenheit</h2>
+      <p>
+        <label for="c">Input Celsius:</label>
+        <input id="c" name="c" type="number" oninput="compfah()">
+
+        <button onclick="fahfor()">Show Fahrenheit Formula!</button>
+      </p>
+
+      <p>
+        <label for="fahrenheit" id="fahlabel">The conversion of x Celsius into Fahrenheit is:</label>
+        <input id="fahrenheit" name="fahrenheit" type="number" readonly>
+      </p>
+    </div>
+
+    <div>
+      <h2>Meters to Feet</h2>
+      <p>
+        <label for="m">Input Meters:</label>
+        <input id="m" name="m" type="number" oninput="compfet()">
+
+        <button onclick="fetfor()">Show Feet Formula!</button>
+      </p>
+
+      <p>
+        <label for="feet" id="fetlabel">The conversion of x Meters into Feet is:</label>
+        <input id="feet" name="feet" type="number" readonly>
+      </p>
+    </div>
+
+    <div>
+      <h2>Feet to Meters</h2>
+      <p>
+        <label for="f">Input Feet:</label>
+        <input id="f" name="f" type="number" oninput="compmet()">
+
+        <button onclick="metfor()">Show Meters Formula!</button>
+      </p>
+
+      <p>
+        <label for="meters" id="metlabel">The conversion of x Feet into Meters is:</label>
+        <input id="meters" name="meters" type="number" readonly>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

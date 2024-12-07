@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Income Tax Calculator</title>
+  <link rel="stylesheet" type="text/css" href="incoStyle.css">
+  <script src="incometax.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <b>Income Tax Calculator</b>
+  </div>
+
+  <p class="head">
+    <label for="taxin">Input Taxable Income: </label>
+    <input id="taxin" name="taxin" type="number" oninput="compintax()">
+  </p>
+
+  <p class="tail">
+    <label for="intax">Your Income Tax is: </label>
+    <input id="intax" name="intax" type="number" readonly>
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>

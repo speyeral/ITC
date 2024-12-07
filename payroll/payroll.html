@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payroll System</title>
+  <link rel="stylesheet" type="text/css" href="payStyle.css">
+  <script src="payroll.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <b>Payroll</b>
+  </div>
+
+  <div class="body">
+    <p class="input">
+      <label for="emname">Employee Name:</label>
+      <input id="emname" name="emname" type="text">
+      <label for="days">Days Worked:</label>
+      <input id="days" name="days" type="number">
+      <label for="drate">Daily Rate:</label>
+      <input id="drate" name="drate" type="number">
+      <label for="damount">Deduction Amount:</label>
+      <input id="damount" name="damount" type="number">
+      <button onclick="addtopayroll()">Add to Payroll</button>
+      <label for="items">Payroll Items:</label>
+      <input id="items" name="items" type="number" readonly>
+      <label for="dellinenum">Delete Line Number:</label>
+      <input id="dellinenum" name="dellinenum" type="number">
+      <button onclick="deletelinenum()">Delete</button>
+    </p>
+  </div>
+
+  <div class="table">
+    <p class="table" id="table"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
